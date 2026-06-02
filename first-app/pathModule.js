@@ -1,4 +1,4 @@
-import {sep, join, basename, dirname, extname, resolve} from "path";
+import {sep, join, basename, dirname, extname, resolve, parse, format} from "path";
 import {fileURLToPath} from "url";
 
 // console.log(sep); - \ 
@@ -26,3 +26,15 @@ console.log(join('/users', '../system', './logs', 'file.txt'));
 console.log(resolve("file.txt"));
 console.log(resolve("/src", "components", "Users.jsx"));
 console.log(__dirname, "config", "app.json");
+
+const pathInfo = parse("app/scr/index.html");
+
+const pathTwo = format({
+    root: "/",
+    dir: "src/app",
+    base: "app.js",
+    ext: ".js",
+    name: "app"
+});
+
+console.log(pathTwo);
