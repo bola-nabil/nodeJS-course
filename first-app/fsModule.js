@@ -56,3 +56,13 @@ import {readFile} from "fs/promises";
 //     console.log(stats.size);
 //     console.log(stats.isFile());
 // })
+
+// tasks
+// task 1
+// writeFile("note.txt", "Hello Node.js fs module", (err) => {
+//     if(err) {
+//         console.log("Finding error when create note.txt file", err);
+//         return
+//     }
+//     console.log("File created successfully");
+// })
