@@ -1,4 +1,6 @@
-import {sep, join, basename, dirname, extname, resolve, parse, format, normalize} from "path";
+import {sep, join, basename, dirname, extname, resolve, parse, format, normalize
+    , isAbsolute
+} from "path";
 import {fileURLToPath} from "url";
 
 // console.log(sep); - \ 
@@ -38,5 +40,10 @@ const pathTwo = format({
     name: "app"
 });
 
+// normalize
 const path = "/users//admin//../profile";
 console.log("normalize:", normalize(path));
+
+// isisAbsolute
+console.log(isAbsolute("/users")); // true
+console.log(isAbsolute("users")); // false
