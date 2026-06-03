@@ -1,7 +1,7 @@
-import {readFileSync, writeFileSync, writeFile, appendFile,
-    unlink, rename, mkdir, readdir, stat
-} from "fs";
-import {readFile} from "fs/promises";
+// import {readFileSync, writeFileSync, writeFile, appendFile,
+//     unlink, rename, mkdir, readdir, stat
+// } from "fs";
+// import {readFile} from "fs/promises";
 
 // const testingContent = readFileSync("./content/test.txt", "utf-8");
 
@@ -66,3 +66,17 @@ import {readFile} from "fs/promises";
 //     }
 //     console.log("File created successfully");
 // })
+
+// task 2
+// import { appendFile, readFile } from "fs/promises";
+
+// try {
+//     await appendFile("./content/journal.txt", "\nDay 1: learned fs module");
+
+//     const data = await readFile("./content/journal.txt", "utf-8");
+
+//     console.log("File Data:", data);
+
+// } catch (err) {
+//     console.log("Error:", err);
+// }

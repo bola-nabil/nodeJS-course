@@ -1,0 +1,2 @@
+Our JournalDay 1: learned fs module
+Day 1: learned fs module
