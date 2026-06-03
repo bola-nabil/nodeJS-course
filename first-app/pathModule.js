@@ -1,4 +1,4 @@
-import {sep, join, basename, dirname, extname, resolve, parse, format} from "path";
+import {sep, join, basename, dirname, extname, resolve, parse, format, normalize} from "path";
 import {fileURLToPath} from "url";
 
 // console.log(sep); - \ 
@@ -29,6 +29,7 @@ console.log(__dirname, "config", "app.json");
 
 const pathInfo = parse("app/scr/index.html");
 
+// format
 const pathTwo = format({
     root: "/",
     dir: "src/app",
@@ -37,4 +38,5 @@ const pathTwo = format({
     name: "app"
 });
 
-console.log(pathTwo);
+const path = "/users//admin//../profile";
+console.log("normalize:", normalize(path));
