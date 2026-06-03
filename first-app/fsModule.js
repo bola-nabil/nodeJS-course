@@ -80,3 +80,37 @@
 // } catch (err) {
 //     console.log("Error:", err);
 // }
+
+// task 3
+// import {mkdir, writeFile, readFile, rename, unlink} from "fs"
+
+// mkdir("data", (err) => {
+//     if (err) {
+//         console.log("Can't create data folder", err);
+//         return;
+//     }
+
+//     writeFile("./data/users.txt", "Ali\nSara\nAhmed", (err) => {
+//         if (err) {
+//             console.log("Can't create users file", err);
+//             return;
+//         }
+
+//         readFile("./data/users.txt", "utf-8", (err, data) => {
+//             if (err) {
+//                 console.log("Can't read data file", err);
+//                 return;
+//             }
+
+//             console.log("Data File:", data);
+
+//             rename("./data/users.txt", "./data/members.txt", (err) => {
+//                 if (err) {
+//                     console.log("Can't rename file", err);
+//                     return;
+//                 }
+
+//             });
+//         });
+//     });
+// });
