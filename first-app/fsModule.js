@@ -1,4 +1,4 @@
-import {readFileSync, writeFileSync} from "fs";
+import {readFileSync, writeFileSync, writeFile, appendFile} from "fs";
 import {readFile} from "fs/promises";
 
 // const testingContent = readFileSync("./content/test.txt", "utf-8");
@@ -14,5 +14,10 @@ import {readFile} from "fs/promises";
 // })
 
 // readFile Modern version
-const data = await readFile("./content/result.txt", "utf-8");
-console.log(data);
+// const data = await readFile("./content/result.txt", "utf-8");
+// console.log(data);
+
+// writeFile
+writeFile("./content/index.txt", "Index.html", (err) => {
+    if(err) throw err;
+});
