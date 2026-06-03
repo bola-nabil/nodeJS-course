@@ -1,4 +1,6 @@
-import {readFileSync, writeFileSync, writeFile, appendFile} from "fs";
+import {readFileSync, writeFileSync, writeFile, appendFile,
+    unlink
+} from "fs";
 import {readFile} from "fs/promises";
 
 // const testingContent = readFileSync("./content/test.txt", "utf-8");
@@ -24,5 +26,10 @@ writeFile("./content/index.txt", "Index.html", (err) => {
 
 // appendFile
 appendFile("./content/index.txt", "using with html", (err) => {
+    if(err) throw err;
+})
+
+// unlink
+unlink("./content/test.txt", (err) => {
     if(err) throw err;
 })
