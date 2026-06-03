@@ -1,5 +1,5 @@
 import {readFileSync, writeFileSync, writeFile, appendFile,
-    unlink, rename
+    unlink, rename, mkdir
 } from "fs";
 import {readFile} from "fs/promises";
 
@@ -36,5 +36,10 @@ import {readFile} from "fs/promises";
 
 // rename
 // rename("test.txt", "./content/result.txt", (err) => {
+//     if(err) throw err;
+// })
+
+// mkdir
+// mkdir("myFolder", (err) => {
 //     if(err) throw err;
 // })
