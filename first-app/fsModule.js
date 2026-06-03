@@ -1,5 +1,5 @@
 import {readFileSync, writeFileSync, writeFile, appendFile,
-    unlink, rename, mkdir, readdir
+    unlink, rename, mkdir, readdir, stat
 } from "fs";
 import {readFile} from "fs/promises";
 
@@ -48,4 +48,11 @@ import {readFile} from "fs/promises";
 // readdir("./content", (err, files) => {
 //     if(err) throw err;
 //     console.log(files);
+// })
+
+// stat
+// stat("./content/result.txt", (err, stats) => {
+//     if(err) throw err;
+//     console.log(stats.size);
+//     console.log(stats.isFile());
 // })
