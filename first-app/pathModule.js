@@ -1,5 +1,5 @@
 import {sep, join, basename, dirname, extname, resolve, parse, format, normalize
-    , isAbsolute
+    , isAbsolute, relative
 } from "path";
 import {fileURLToPath} from "url";
 
@@ -47,3 +47,7 @@ console.log("normalize:", normalize(path));
 // isisAbsolute
 console.log(isAbsolute("/users")); // true
 console.log(isAbsolute("users")); // false
+
+// relative
+console.log(relative("/users/admin", "/users/admin/images"));
+console.log(relative("/users/admin", "/users/profile"));
