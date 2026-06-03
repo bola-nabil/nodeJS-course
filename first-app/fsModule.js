@@ -21,3 +21,8 @@ import {readFile} from "fs/promises";
 writeFile("./content/index.txt", "Index.html", (err) => {
     if(err) throw err;
 });
+
+// appendFile
+appendFile("./content/index.txt", "using with html", (err) => {
+    if(err) throw err;
+})
