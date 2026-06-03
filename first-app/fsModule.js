@@ -1,5 +1,5 @@
 import {readFileSync, writeFileSync, writeFile, appendFile,
-    unlink
+    unlink, rename
 } from "fs";
 import {readFile} from "fs/promises";
 
@@ -20,16 +20,21 @@ import {readFile} from "fs/promises";
 // console.log(data);
 
 // writeFile
-writeFile("./content/index.txt", "Index.html", (err) => {
-    if(err) throw err;
-});
+// writeFile("./content/index.txt", "Index.html", (err) => {
+//     if(err) throw err;
+// });
 
 // appendFile
-appendFile("./content/index.txt", "using with html", (err) => {
-    if(err) throw err;
-})
+// appendFile("./content/index.txt", "using with html", (err) => {
+//     if(err) throw err;
+// })
 
 // unlink
-unlink("./content/test.txt", (err) => {
-    if(err) throw err;
-})
+// unlink("./content/test.txt", (err) => {
+//     if(err) throw err;
+// })
+
+// rename
+// rename("test.txt", "./content/result.txt", (err) => {
+//     if(err) throw err;
+// })
