@@ -53,3 +53,21 @@ emitter.once("userRegistered", () => {
 
 emitter.emit("userRegistered", userData);
 emitter.emit("userRegistered", userData);
+
+// forth task
+function firstPaymentListener() {
+    console.log("Payment received: $500");
+}
+
+function secondPaymentListener() {
+    console.log("Generating invoice..");
+}
+
+emitter.on("payment", firstPaymentListener);
+emitter.on("payment", secondPaymentListener);
+console.log(emitter.listenerCount("payment"));
+
+emitter.off("payment", secondPaymentListener);
+console.log(emitter.listenerCount("payment"));
+
+emitter.emit("payment");
