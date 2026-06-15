@@ -1,6 +1,5 @@
 // first task
 import EventEmitter from "events";
-
 const emitter = new EventEmitter();
 
 emitter.on("newUser", (username) => {
@@ -33,3 +32,24 @@ emitter.on("orderCreated", ({price}) => {
 });
 
 emitter.emit("orderCreated", orderData);
+
+// third task
+const userData = {
+    name: "Ahmed",
+    email: "ahmed@example.com"
+};
+
+emitter.on("userRegistered", ({name}) => {
+    console.log(`Saving ${name} to database...`)
+});
+
+emitter.on("userRegistered", ({email}) => {
+    console.log(`Sending welcome email to ${email}...`)
+});
+
+emitter.once("userRegistered", () => {
+    console.log("Logging registration activity...");
+});
+
+emitter.emit("userRegistered", userData);
+emitter.emit("userRegistered", userData);
