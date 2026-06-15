@@ -41,3 +41,7 @@ function greet() {
 customEmitter.on("greet", greet);
 customEmitter.off("greet", greet);
 customEmitter.emit("greet"); // noting
+
+// removeAllListeners -- remove all listeners for an events
+customEmitter.removeAllListeners("greet");
+customEmitter.emit("greet"); // nothing
