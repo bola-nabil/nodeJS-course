@@ -10,3 +10,10 @@ customEmitter.on("response", () => {
     console.log("second event");
 });
 customEmitter.emit("response");
+
+// Passing Data with Events
+customEmitter.on("userLogin", (username) => {
+    console.log(`Welcome ${username}`);
+});
+
+customEmitter.emit("userLogin", "bola");
