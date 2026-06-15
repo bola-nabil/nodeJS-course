@@ -1,0 +1,12 @@
+import {EventEmitter} from 'events';
+const customEmitter = new EventEmitter();
+
+// first example
+customEmitter.on("response", () => {
+    console.log("Server Response");
+});
+
+customEmitter.on("response", () => {
+    console.log("second event");
+});
+customEmitter.emit("response");

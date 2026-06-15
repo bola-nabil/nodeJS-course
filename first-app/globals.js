@@ -2,7 +2,6 @@ console.log(__dirname); // Current folder path
 console.log(__filename); // Full current file path
 console.log(process.argv); // Gets terminal arguments.
 
-
 const name = process.argv[2];
 console.log(`Hello ${name}`); // Bola
 

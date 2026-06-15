@@ -1,5 +1,6 @@
 import {readFile, writeFile} from "fs/promises";
 
+// add user
 async function addUser(name) {
 
     let usersData = [];
@@ -13,9 +14,7 @@ async function addUser(name) {
         name: name
     };
 
-
-    usersData.push(newUser)
-
+    usersData.push(newUser);
 
     await writeFile("./database.json", `${JSON.stringify(usersData)}`);
 }
