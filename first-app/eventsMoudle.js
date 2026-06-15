@@ -24,3 +24,11 @@ customEmitter.on("login", (username, age) => {
 });
 
 customEmitter.emit("login", "bola", 22);
+
+// once -- run only one time
+customEmitter.once("welcome", () => {
+    console.log("welcome");
+});
+
+customEmitter.emit("welcome"); // run only
+customEmitter.emit("welcome");
