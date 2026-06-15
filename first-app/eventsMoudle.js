@@ -17,3 +17,10 @@ customEmitter.on("userLogin", (username) => {
 });
 
 customEmitter.emit("userLogin", "bola");
+
+// Multiple Parameters
+customEmitter.on("login", (username, age) => {
+    console.log(`Login ${username} - ${age}`);
+});
+
+customEmitter.emit("login", "bola", 22);
