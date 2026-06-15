@@ -32,3 +32,12 @@ customEmitter.once("welcome", () => {
 
 customEmitter.emit("welcome"); // run only
 customEmitter.emit("welcome");
+
+// off -- remove listener
+function greet() {
+    console.log("hello");
+}
+
+customEmitter.on("greet", greet);
+customEmitter.off("greet", greet);
+customEmitter.emit("greet"); // noting
