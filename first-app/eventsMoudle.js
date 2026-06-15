@@ -45,3 +45,12 @@ customEmitter.emit("greet"); // noting
 // removeAllListeners -- remove all listeners for an events
 customEmitter.removeAllListeners("greet");
 customEmitter.emit("greet"); // nothing
+
+// Listener Count
+function hi() {
+    console.log("hi");
+}
+customEmitter.on("hi", hi);
+customEmitter.on("hi", hi);
+customEmitter.on("hi", hi);
+console.log(customEmitter.listenerCount("hi"));
