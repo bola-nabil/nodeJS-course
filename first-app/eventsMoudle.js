@@ -53,4 +53,21 @@ function hi() {
 customEmitter.on("hi", hi);
 customEmitter.on("hi", hi);
 customEmitter.on("hi", hi);
-console.log(customEmitter.listenerCount("hi"));
+console.log(customEmitter.listenerCount("hi")); // output 3
+
+// real world example
+customEmitter.on("userRegistered", (user) => {
+    console.log(`Welcome ${user}`);
+});
+
+customEmitter.on("userRegistered", (user) => {
+    console.log(`Send email to ${user}`);
+});
+
+function registerUser(name) {
+    console.log("User Saved");
+
+    customEmitter.emit("userRegistered", name);
+}
+
+registerUser("bola");
