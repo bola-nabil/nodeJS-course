@@ -1,0 +1,53 @@
+import {sep, join, basename, dirname, extname, resolve, parse, format, normalize
+    , isAbsolute, relative
+} from "path";
+import {fileURLToPath} from "url";
+
+// console.log(sep); - \ 
+
+// console.log(basename(filePath)); // print file name
+
+const fileNameWithoutExt = basename("/app/src/App.jsx", ".jsx");
+// console.log(fileNameWithoutExt);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// extname
+console.log(extname("index.html")); // html
+console.log(extname("index.conffe.html")); // html
+console.log(extname("index.")); // .
+console.log(extname("index")); // 
+console.log(extname(".index")); // 
+
+// join
+const filePath = join("src", "components", "Greeting.jsx"); // join path
+console.log(join('/users', '../system', './logs', 'file.txt'));
+
+// resolve
+console.log(resolve("file.txt"));
+console.log(resolve("/src", "components", "Users.jsx"));
+console.log(__dirname, "config", "app.json");
+
+const pathInfo = parse("app/scr/index.html");
+
+// format
+const pathTwo = format({
+    root: "/",
+    dir: "src/app",
+    base: "app.js",
+    ext: ".js",
+    name: "app"
+});
+
+// normalize
+const path = "/users//admin//../profile";
+console.log("normalize:", normalize(path));
+
+// isisAbsolute
+console.log(isAbsolute("/users")); // true
+console.log(isAbsolute("users")); // false
+
+// relative
+console.log(relative("/users/admin", "/users/admin/images"));
+console.log(relative("/users/admin", "/users/profile"));

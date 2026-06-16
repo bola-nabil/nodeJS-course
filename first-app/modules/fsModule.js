@@ -1,0 +1,116 @@
+// import {readFileSync, writeFileSync, writeFile, appendFile,
+//     unlink, rename, mkdir, readdir, stat
+// } from "fs";
+// import {readFile} from "fs/promises";
+
+// const testingContent = readFileSync("./content/test.txt", "utf-8");
+
+// writeFileSync
+// writeFileSync("./content/result.txt", "Result of test"); // create result file
+// const readResultTesting = readFileSync("./content/result.txt", "utf-8");
+
+// readFile
+// readFile("./content/test.txt", "utf-8", (err, data) => {
+//     if(err) throw err;
+//     console.log(data);
+// })
+
+// readFile Modern version
+// const data = await readFile("./content/result.txt", "utf-8");
+// console.log(data);
+
+// writeFile
+// writeFile("./content/index.txt", "Index.html", (err) => {
+//     if(err) throw err;
+// });
+
+// appendFile
+// appendFile("./content/index.txt", "using with html", (err) => {
+//     if(err) throw err;
+// })
+
+// unlink
+// unlink("./content/test.txt", (err) => {
+//     if(err) throw err;
+// })
+
+// rename
+// rename("test.txt", "./content/result.txt", (err) => {
+//     if(err) throw err;
+// })
+
+// mkdir
+// mkdir("myFolder", (err) => {
+//     if(err) throw err;
+// })
+
+// readdir
+// readdir("./content", (err, files) => {
+//     if(err) throw err;
+//     console.log(files);
+// })
+
+// stat
+// stat("./content/result.txt", (err, stats) => {
+//     if(err) throw err;
+//     console.log(stats.size);
+//     console.log(stats.isFile());
+// })
+
+// tasks
+// task 1
+// writeFile("note.txt", "Hello Node.js fs module", (err) => {
+//     if(err) {
+//         console.log("Finding error when create note.txt file", err);
+//         return
+//     }
+//     console.log("File created successfully");
+// })
+
+// task 2
+// import { appendFile, readFile } from "fs/promises";
+
+// try {
+//     await appendFile("./content/journal.txt", "\nDay 1: learned fs module");
+
+//     const data = await readFile("./content/journal.txt", "utf-8");
+
+//     console.log("File Data:", data);
+
+// } catch (err) {
+//     console.log("Error:", err);
+// }
+
+// task 3
+// import {mkdir, writeFile, readFile, rename, unlink} from "fs"
+
+// mkdir("data", (err) => {
+//     if (err) {
+//         console.log("Can't create data folder", err);
+//         return;
+//     }
+
+//     writeFile("./data/users.txt", "Ali\nSara\nAhmed", (err) => {
+//         if (err) {
+//             console.log("Can't create users file", err);
+//             return;
+//         }
+
+//         readFile("./data/users.txt", "utf-8", (err, data) => {
+//             if (err) {
+//                 console.log("Can't read data file", err);
+//                 return;
+//             }
+
+//             console.log("Data File:", data);
+
+//             rename("./data/users.txt", "./data/members.txt", (err) => {
+//                 if (err) {
+//                     console.log("Can't rename file", err);
+//                     return;
+//                 }
+
+//             });
+//         });
+//     });
+// });
