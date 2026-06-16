@@ -47,3 +47,22 @@ readStr.on("error", (err) => {
 writeStr.on("error", (err) => {
     console.log("Write stream error", err.message);
 });
+
+// task4: Count number of chunks received while reading a file
+const readFileStr = createReadStream("./content/index.txt", {encoding: "utf-8"});
+
+let chunkCount = 0;
+
+readFileStr.on("data", (chunk) => {
+    chunkCount++;
+    console.log("Chunk received:", chunk);
+});
+
+readFileStr.on("end", () => {
+    console.log("Finish reading file");
+    console.log("Total chunks:", chunkCount);
+});
+
+readFileStr.on("error", (err) => {
+    console.log("Read stream error:", err.message);
+});
