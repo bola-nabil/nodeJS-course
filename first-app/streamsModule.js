@@ -1,4 +1,5 @@
 import {createReadStream, createWriteStream} from "fs";
+import {Transform} from "stream";
 
 // Readable Stream
 const readStream = createReadStream("./content/index.txt", "utf-8");
@@ -12,3 +13,10 @@ const writeStream = createWriteStream("./content/ouput.txt");
 writeStream.write("Hello ");
 writeStream.write("World !");
 writeStream.end();
+
+// Transform Stream
+const upperCase = new Transform({
+    transform(chunk, encoding, callback) {
+        callback(null, chunk.toString().toUpperCase());
+    }
+});
