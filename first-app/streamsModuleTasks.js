@@ -29,3 +29,21 @@ writeStream.on("finish", () => {
 writeStream.on("error", (err) => {
     console.log("Stream Error", err.message);
 });
+
+// task3: Copy a file using .pipe()
+const readStr = createReadStream("./content/index.txt", "utf-8");
+const writeStr = createWriteStream("./content/ouput.txt");
+
+readStr.pipe(writeStr);
+
+writeStr.on("finish", () => {
+    console.log("File copied successfully");
+});
+
+readStr.on("error", (err) => {
+    console.log("Read stream error", err.message);
+});
+
+writeStr.on("error", (err) => {
+    console.log("Write stream error", err.message);
+});
