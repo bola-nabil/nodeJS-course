@@ -1,4 +1,5 @@
 import {createReadStream, createWriteStream} from "fs";
+import {Transform} from "stream";
 
 // task 1: Create a readable stream and print file content chunk by chunk
 const readStream = createReadStream("./content/index.txt", "utf-8");
@@ -66,3 +67,14 @@ readFileStr.on("end", () => {
 readFileStr.on("error", (err) => {
     console.log("Read stream error:", err.message);
 });
+
+// task5: reate a Transform stream that: converts text to lowercase, replaces spaces with -
+const lowerCase = new Transform({
+    transform(chunk, encoding, callback) {
+        callback(null, chunk.toString().toLowerCase().replace(/ /g, "-"));
+    }
+});
+
+createReadStream("./content/ouput.txt")
+.pipe(lowerCase)
+.pipe(createWriteStream("./content/index.txt"));
