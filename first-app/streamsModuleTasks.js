@@ -78,3 +78,20 @@ const lowerCase = new Transform({
 createReadStream("./content/ouput.txt")
 .pipe(lowerCase)
 .pipe(createWriteStream("./content/index.txt"));
+
+// task6: Build a mini logger: Read input file - Transform lines to uppercase - Write to output file
+const upperCase = new Transform({
+    transform(chunk, encoding, callback) {
+        callback(null, chunk.toString().toUpperCase());
+    }
+});
+
+createReadStream("./content/index.txt")
+    .pipe(upperCase)
+    .pipe(createWriteStream("./content/output.txt"))
+    .on("finish", () => {
+        console.log("Logging completed!");
+    })
+    .on("error", (err) => {
+        console.log("Stream error:", err.message);
+});
