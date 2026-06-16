@@ -20,3 +20,9 @@ const upperCase = new Transform({
         callback(null, chunk.toString().toUpperCase());
     }
 });
+
+// Real Example: Copy File
+const readStr = createReadStream("./content/index.txt");
+const writeStr = createWriteStream("./content/ouput.txt");
+
+readStr.pipe(writeStr);
