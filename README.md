@@ -4,3 +4,5 @@ Node.JS course
 - OS Module
 - Path Module
 - File System
+- Events Module
+- Stream Module
