@@ -7,3 +7,8 @@ console.log(bufferTask1.toString());
 const bufferTask2 = Buffer.alloc(8);
 bufferTask2.write("Backend");
 console.log(bufferTask2.toString());
+
+// task 3
+const bufferTask3 = Buffer.from("ABCDEF");
+bufferTask3[0] = 90;
+console.log(bufferTask3.toString());
