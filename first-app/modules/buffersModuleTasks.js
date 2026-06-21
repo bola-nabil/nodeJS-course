@@ -33,3 +33,21 @@ console.log(fileContent);
 const fileContentLength = fileContent.length;
 console.log(fileContentLength);
 console.log(fileContent.toString());
+
+// task 7
+import {createReadStream} from "fs";
+
+const readStream = createReadStream("../content/index.txt");
+
+readStream.on("data", (chunk) => {
+    console.log(chunk.length);
+    console.log("Reading...");
+});
+
+readStream.on("end", () => {
+    console.log("Done!");
+});
+
+readStream.on("error", (err) => {
+    console.log("Mistake happend when reading data", err.message);
+});
