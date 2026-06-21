@@ -26,3 +26,9 @@ const target = Buffer.alloc(5);
 
 source.copy(target);
 // console.log(target.toString()); -- Hello
+
+// Concatenating Buffer
+const b1 = Buffer.from("hello ");
+const b2 = Buffer.from("world");
+const result = Buffer.concat([b1, b2]);
+// console.log(result.toString()); -- hello world
