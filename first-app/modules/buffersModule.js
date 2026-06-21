@@ -32,3 +32,6 @@ const b1 = Buffer.from("hello ");
 const b2 = Buffer.from("world");
 const result = Buffer.concat([b1, b2]);
 // console.log(result.toString()); -- hello world
+
+// Encoding
+const bufferEncoding = Buffer.from("hello", "utf-8");
