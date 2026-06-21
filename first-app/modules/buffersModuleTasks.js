@@ -24,3 +24,12 @@ const bufferTask5 = Buffer.from("Hello World");
 console.log(bufferTask5.toString("base64"));
 const decodeBuffer = Buffer.from("SGVsbG8gV29ybGQ=", "base64");
 console.log(decodeBuffer.toString());
+
+// task 6 
+import {readFile} from "fs/promises";
+
+const fileContent = await readFile("../content/index.txt");
+console.log(fileContent);
+const fileContentLength = fileContent.length;
+console.log(fileContentLength);
+console.log(fileContent.toString());
