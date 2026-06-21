@@ -10,3 +10,7 @@ const covertingStringBuffer = bufferFromString.toString(); // Hello
 // Changing Data
 const bufferData = Buffer.from("ABC");
 bufferData[0] = 68; // DBC
+
+// Buffer Length
+const bufferWord = Buffer.from("Hello");
+let bufferWordLength = bufferWord.length; // 5 -- Each English character = 1 byte.
