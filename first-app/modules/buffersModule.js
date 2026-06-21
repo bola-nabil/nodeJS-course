@@ -19,3 +19,10 @@ let bufferWordLength = bufferWord.length; // 5 -- Each English character = 1 byt
 const bufferNewWord = Buffer.alloc(10);
 bufferNewWord.write("Node");
 // console.log(bufferNewWord.toString()); -- Node
+
+// Copying Buffers
+const source = Buffer.from("Hello");
+const target = Buffer.alloc(5);
+
+source.copy(target);
+// console.log(target.toString()); -- Hello
