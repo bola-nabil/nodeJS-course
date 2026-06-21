@@ -6,3 +6,7 @@ const bufferFromString = Buffer.from("Hello"); // <Buffer 48 65 6c 6c 6f>
 
 // Converting Buffer to String
 const covertingStringBuffer = bufferFromString.toString(); // Hello
+
+// Changing Data
+const bufferData = Buffer.from("ABC");
+bufferData[0] = 68; // DBC
