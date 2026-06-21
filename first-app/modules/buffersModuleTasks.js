@@ -12,3 +12,9 @@ console.log(bufferTask2.toString());
 const bufferTask3 = Buffer.from("ABCDEF");
 bufferTask3[0] = 90;
 console.log(bufferTask3.toString());
+
+// task 4
+const b1 = Buffer.from("Hello ");
+const b2 = Buffer.from("Node");
+const result = Buffer.concat([b1, b2]);
+console.log(result.toString());
