@@ -13,4 +13,9 @@ bufferData[0] = 68; // DBC
 
 // Buffer Length
 const bufferWord = Buffer.from("Hello");
-let bufferWordLength = bufferWord.length; // 5 -- Each English character = 1 byte.
+let bufferWordLength = bufferWord.length; // 5 -- Each English character = 1 byte
+
+// Writing Into Buffer
+const bufferNewWord = Buffer.alloc(10);
+bufferNewWord.write("Node");
+// console.log(bufferNewWord.toString()); -- Node
