@@ -18,3 +18,9 @@ const b1 = Buffer.from("Hello ");
 const b2 = Buffer.from("Node");
 const result = Buffer.concat([b1, b2]);
 console.log(result.toString());
+
+// task 5
+const bufferTask5 = Buffer.from("Hello World");
+console.log(bufferTask5.toString("base64"));
+const decodeBuffer = Buffer.from("SGVsbG8gV29ybGQ=", "base64");
+console.log(decodeBuffer.toString());
