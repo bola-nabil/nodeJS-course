@@ -24,3 +24,11 @@ readFile("users.txt", "utf-8", (err, data) => {
 
     console.log(data);
 });
+
+// task 3
+try {
+    const data = JSON.parse('{"name": "Ali"}');
+    console.log(data);
+} catch (err) {
+    console.log("Error:", err.message);
+}
