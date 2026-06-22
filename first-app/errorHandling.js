@@ -18,3 +18,15 @@ try {
 } catch(err) {
     console.log(err.message);
 }
+
+// Error Handling in Callback APIs
+import {readFile} from "fs";
+
+readFile("./content/index.txt", "utf-8", (data, err) => {
+    if(err) {
+        console.log("Error", err.message);
+        return;
+    }
+
+    console.log("Data", data);
+});
