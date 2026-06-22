@@ -1,5 +1,20 @@
 // The Error Object
 const err = new Error("Something went wrong");
-console.log(err.message);
-console.log(err.name);
-console.log(err.stack);
+// console.log(err.message);
+// console.log(err.name);
+// console.log(err.stack);
+
+// Throwing Your Own Errors
+function divide(a, b) {
+    if(b === 0) {
+        throw new Error("Cannot divide by zero");
+    }
+
+    return a / b;
+}
+
+try {
+    divide(10, 0);
+} catch(err) {
+    console.log(err.message);
+}
