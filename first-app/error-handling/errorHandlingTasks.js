@@ -1,4 +1,5 @@
 import {readFile} from "fs/promises";
+import {createReadStream} from "fs";
 
 // task 1: Throw an error if b equals 0
 function divide(a, b) {
@@ -66,3 +67,14 @@ async function readMyFile() {
 }
 
 readMyFile();
+
+// Task 6
+const readStream = createReadStream("users.txt", {encoding: "utf-8"});
+
+readStream.on("data", (chunk) => {
+    console.log(chunk);
+});
+
+readStream.on("error", (err) => {
+    console.log("Error:", err.message);
+});
