@@ -1,3 +1,5 @@
+import {readFile} from "fs/promises";
+
 // task 1: Throw an error if b equals 0
 function divide(a, b) {
     if(b === 0) {
@@ -14,8 +16,6 @@ try {
 }
 
 // task 2
-import {readFile} from "fs";
-
 readFile("users.txt", "utf-8", (err, data) => {
     if(err) {
         console.log("File not found");
@@ -54,3 +54,15 @@ try {
 } catch(err) {
     console.log(err.message);
 }
+
+// task 5
+async function readMyFile() {
+    try {
+        const data = await readFile("users.js", "utf-8");
+        console.log("reading file:", data);
+    } catch (err) {
+        console.log("Reading file error:", err.message);
+    }
+}
+
+readMyFile();
