@@ -30,3 +30,24 @@ readFile("./content/index.txt", "utf-8", (data, err) => {
 
     console.log("Data", data);
 });
+
+// Creating Custom Error Classes
+class ValidationError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "ValidationError";
+    }
+}
+
+function register(age) {
+    if(age < 18) {
+        throw new ValidationError("Age must be at least 18");
+    }
+}
+
+try {
+    register(15);
+} catch(err) {
+    console.log(err.message);
+    console.log(err.name);
+}
