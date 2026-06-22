@@ -32,3 +32,25 @@ try {
 } catch (err) {
     console.log("Error:", err.message);
 }
+
+// task 4
+class AgeError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "AgeError";
+    }
+}
+
+function checkAge(age) {
+    if(age < 18) {
+        throw new AgeError("Age not allowed");
+    }
+
+    return "Allowed";
+}
+
+try {
+    console.log(checkAge(15));
+} catch(err) {
+    console.log(err.message);
+}
