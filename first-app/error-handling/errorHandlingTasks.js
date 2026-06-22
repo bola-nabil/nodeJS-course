@@ -12,3 +12,15 @@ try {
 } catch(err) {
     console.log(err.message);
 }
+
+// task 2
+import {readFile} from "fs";
+
+readFile("users.txt", "utf-8", (err, data) => {
+    if(err) {
+        console.log("File not found");
+        return;
+    }
+
+    console.log(data);
+});
