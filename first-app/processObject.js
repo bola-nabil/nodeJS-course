@@ -21,8 +21,8 @@ const currentDir = process.cwd();
 console.log("Current Dir:", currentDir);
 
 // Change Working Directory
-process.chdir("../");
-console.log("Current Dir:", process.cwd());
+// process.chdir("../");
+// console.log("Current Dir:", process.cwd());
 
 // Command-Line Arguments
 const commandArgs = process.argv;
@@ -36,3 +36,10 @@ console.log(`Hello ${name} - Your age is: ${age}`);
 // Create Your Own Environment Variable
 // set MY_NAME=Bola
 console.log(process.env.MY_NAME);
+
+// Load variables: from env file
+import dotenv from "dotenv";
+const result = dotenv.config();
+dotenv.config();
+console.log(result);
+console.log("env port:", process.env.PORT);
