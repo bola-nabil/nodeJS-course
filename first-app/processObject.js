@@ -11,3 +11,7 @@ console.log(nodeVersion);
 // Platform
 const platformProcess = process.platform;
 console.log("Platform:", platformProcess); // win32
+
+// CPU Architecture
+const cpuProcess = process.arch;
+console.log("CPU process:", cpuProcess); // x64
