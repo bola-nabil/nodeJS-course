@@ -32,3 +32,7 @@ console.log("command aarguments:", commandArgs);
 const name = process.argv[2];
 const age = process.argv[3];
 console.log(`Hello ${name} - Your age is: ${age}`);
+
+// Create Your Own Environment Variable
+// set MY_NAME=Bola
+console.log(process.env.MY_NAME);
