@@ -50,3 +50,8 @@ console.log("env port:", process.env.PORT);
 process.on("exit", (code) => {
     console.log(`Process exiting with code ${code}`);
 });
+
+// Before Exit
+process.on("beforeExit", (code) => {
+    console.log("Node is about to exit");
+});
