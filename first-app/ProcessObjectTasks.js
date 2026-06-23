@@ -31,3 +31,13 @@ import dotenv from "dotenv";
 dotenv.config();
 console.log(`App Name: ${process.env.APP_NAME}`);
 console.log(`App Port: ${process.env.PORT}`);
+
+// Task 7
+const username = process.argv[2];
+
+if (!username) {
+    console.log("Username is required");
+    process.exit(1);
+}
+
+console.log(`Welcome ${username}`);
