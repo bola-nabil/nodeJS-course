@@ -23,3 +23,12 @@ console.log("Current Dir:", currentDir);
 // Change Working Directory
 process.chdir("../");
 console.log("Current Dir:", process.cwd());
+
+// Command-Line Arguments
+const commandArgs = process.argv;
+console.log("command aarguments:", commandArgs);
+
+// Multiple Arguments
+const name = process.argv[2];
+const age = process.argv[3];
+console.log(`Hello ${name} - Your age is: ${age}`);
