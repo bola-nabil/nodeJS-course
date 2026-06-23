@@ -15,3 +15,7 @@ console.log("Platform:", platformProcess); // win32
 // CPU Architecture
 const cpuProcess = process.arch;
 console.log("CPU process:", cpuProcess); // x64
+
+// Current Working Directory
+const currentDir = process.cwd();
+console.log("Current Dir:", currentDir);
