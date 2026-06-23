@@ -19,3 +19,7 @@ console.log("CPU process:", cpuProcess); // x64
 // Current Working Directory
 const currentDir = process.cwd();
 console.log("Current Dir:", currentDir);
+
+// Change Working Directory
+process.chdir("../");
+console.log("Current Dir:", process.cwd());
