@@ -46,3 +46,29 @@ console.log(`Welcome ${username}`);
 process.on("exit", (code) => {
     console.log("Thanks for using this app");
 });
+
+// Final Project
+
+const userName = process.argv[2];
+const userAge = process.argv[3];
+
+// 1. Validate FIRST
+if (!userName) {
+    console.log("❌ Username is required");
+    process.exit(1);
+}
+
+// 2. Main output
+console.log(`Welcome ${userName} - Your age is: ${userAge}`);
+console.log("Current Dir:", process.cwd());
+console.log(`Process ID: ${process.pid}`);
+console.log(`Platform: ${process.platform}`);
+
+// 3. Memory usage (fixed)
+const memory = process.memoryUsage();
+console.log(`Memory Usage: ${(memory.rss / 1024 / 1024).toFixed(2)} MB`);
+
+// 4. Exit event
+process.on("exit", (code) => {
+    console.log("Exit Program");
+});
