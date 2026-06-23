@@ -21,3 +21,7 @@ const name = process.argv[2];
 const country = process.argv[3];
 const greeting = `Hello ${name} from ${country}`;
 console.log(greeting);
+
+// Task 5
+// set FAVORITE_LANGUAGE=JavaScript
+console.log(process.env.FAVORITE_LANGUAGE);
