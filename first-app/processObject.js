@@ -55,3 +55,6 @@ process.on("exit", (code) => {
 process.on("beforeExit", (code) => {
     console.log("Node is about to exit");
 });
+
+// Memory Usage
+console.log(process.memoryUsage());
