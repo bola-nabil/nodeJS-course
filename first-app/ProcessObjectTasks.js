@@ -15,3 +15,9 @@ console.log("Dir After Changed:", process.cwd());
 const num1 = Number(process.argv[2]);
 const num2 = Number(process.argv[3]);
 console.log(`Sum = ${num1 + num2}`);
+
+// Task 4
+const name = process.argv[2];
+const country = process.argv[3];
+const greeting = `Hello ${name} from ${country}`;
+console.log(greeting);
