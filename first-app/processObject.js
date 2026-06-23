@@ -43,3 +43,10 @@ const result = dotenv.config();
 dotenv.config();
 console.log(result);
 console.log("env port:", process.env.PORT);
+
+// Listening for Process Events
+
+// Exit Event
+process.on("exit", (code) => {
+    console.log(`Process exiting with code ${code}`);
+});
