@@ -4,4 +4,6 @@ const processId = process.pid;
 // Parent Process ID
 const parentProcessId = process.ppid;
 
-console.log(parentProcessId);
+// Node.js Version
+const nodeVersion = process.version;
+console.log(nodeVersion);
