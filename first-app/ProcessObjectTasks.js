@@ -8,8 +8,8 @@ console.log(process.arch);
 // Task 2
 const currentDir = process.cwd();
 console.log("Current Dir:", currentDir);
-process.chdir("../");
-console.log("Dir After Changed:", process.cwd());
+// process.chdir("../");
+// console.log("Dir After Changed:", process.cwd());
 
 // Task 3
 const num1 = Number(process.argv[2]);
@@ -25,3 +25,9 @@ console.log(greeting);
 // Task 5
 // set FAVORITE_LANGUAGE=JavaScript
 console.log(process.env.FAVORITE_LANGUAGE);
+
+// Task 6
+import dotenv from "dotenv";
+dotenv.config();
+console.log(`App Name: ${process.env.APP_NAME}`);
+console.log(`App Port: ${process.env.PORT}`);
