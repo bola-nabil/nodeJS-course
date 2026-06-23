@@ -41,3 +41,8 @@ if (!username) {
 }
 
 console.log(`Welcome ${username}`);
+
+// Task 8
+process.on("exit", (code) => {
+    console.log("Thanks for using this app");
+});
