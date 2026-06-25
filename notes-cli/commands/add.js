@@ -1,6 +1,6 @@
 import { loadNotes, saveNotes } from "../services/notesService.js";
 
-export const addCommand = async() => {
+export const add = async() => {
     const firstArg = process.argv[2];
     const secondArg = process.argv[3];
 
