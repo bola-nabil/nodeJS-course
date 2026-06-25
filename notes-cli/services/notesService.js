@@ -1,4 +1,4 @@
-import {readFile} from "fs/promises";
+import {readFile, writeFile} from "fs/promises";
 
 export const loadNotes = async () => {
     try {
@@ -9,3 +9,8 @@ export const loadNotes = async () => {
         return [];
     }
 }
+
+export const saveNotes = async(notes) => {
+    const data = notes;
+    const dataToJson = JSON.stringify(data);
+} 
