@@ -1,3 +1,5 @@
+import {loadNotes} from "../services/notesService.js";
+
 export const commandChecker = (command) => {
     const firstArg = process.argv[2];
     const secondArg = process.argv[3];
@@ -12,3 +14,5 @@ export const commandChecker = (command) => {
 }
 
 export const commandOrder = process.argv[2];
+
+export const notesData = await loadNotes();
