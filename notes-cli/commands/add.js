@@ -5,5 +5,13 @@ export const addCommand = () => {
    const firstCommand = `Command: ${firstArg}`;
    const secondCommand = `Title: ${secondArg}`;
 
-   console.log(`${firstCommand}\n${secondCommand}`);
+   if(!firstArg) {
+        return "Please provide a command.";
+   }
+
+   if(firstArg !== "add") {
+        return "Unknown command.";
+   }
+
+   return `${firstCommand}\n${secondCommand}`;
 }
