@@ -13,4 +13,10 @@ export const loadNotes = async () => {
 export const saveNotes = async(notes) => {
     const data = notes;
     const dataToJson = JSON.stringify(data);
+
+    try {
+        await writeFile("notes.json", dataToJson);
+    } catch(err) {
+        return `Error: ${err.message}`;
+    }
 } 
