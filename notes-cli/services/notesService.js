@@ -16,6 +16,7 @@ export const saveNotes = async(notes) => {
 
     try {
         await writeFile("notes.json", dataToJson);
+        return "Success putting data";
     } catch(err) {
         return `Error: ${err.message}`;
     }
