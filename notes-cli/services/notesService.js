@@ -12,7 +12,7 @@ export const loadNotes = async () => {
 
 export const saveNotes = async(notes) => {
     const data = notes;
-    const dataToJson = JSON.stringify(data);
+    const dataToJson = JSON.stringify(data, null, 2);
 
     try {
         await writeFile("notes.json", dataToJson);
