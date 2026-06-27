@@ -5,5 +5,5 @@ const addCommand = await add();
 console.log(addCommand);
 
 // list command
-const listCommand = await list();
+const listCommand = list();
 console.log(listCommand);

@@ -1,6 +1,6 @@
 import {commandChecker, commandOrder, notesData} from "../utils/fileHelper.js"
 
-export const list = async() => {
+export const list = () => {
     commandChecker("list");
 
     if(commandOrder == "list") {
