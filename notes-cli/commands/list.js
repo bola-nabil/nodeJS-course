@@ -1,13 +1,9 @@
 import {commandChecker, commandOrder, notesData} from "../utils/fileHelper.js"
 
 export const list = () => {
-    commandChecker("list");
+      const data = notesData.map((data) => {
+        return  `ID: ${data.id}\nTitle: ${data.title}\nCreated: ${data.createdAt}`
+      });
 
-    if(commandOrder == "list") {
-       const data = notesData.map((data) => {
-         return  `ID: ${data.id}\nTitle: ${data.title}\nCreated: ${data.createdAt}`
-       });
-
-       return data.toString();
-    }
+      return data.toString();
 }
