@@ -1,4 +1,4 @@
-import {commandChecker, commandOrder, notesData} from "../utils/fileHelper.js"
+import {notesData} from "../utils/fileHelper.js"
 
 export const list = () => {
       const data = notesData.map((data) => {
