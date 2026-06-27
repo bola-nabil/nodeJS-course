@@ -1,19 +1,3 @@
-import {add} from "./commands/add.js";
-import {list} from "./commands/list.js";
-import {read} from "./commands/read.js";
-import {remove} from "./commands/remove.js";
+import { commandInput, commandOrder } from "./utils/fileHelper.js";
 
-const addCommand = await add();
-console.log(addCommand);
-
-// list command
-const listCommand = list();
-console.log(listCommand);
-
-// read command
-const readCommand = read();
-console.log(readCommand);
-
-// remove command
-const removeCommand = await remove();
-console.log(removeCommand);
+console.log(await commandInput(commandOrder));

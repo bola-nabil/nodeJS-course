@@ -8,18 +8,23 @@ import {update} from "../commands/update.js";
 export const commandOrder = process.argv[2];
 export const notesData = await loadNotes();
 
-export const commandInput = (command) => {
+export const commandInput = async (command) => {
 
     if(!commandOrder) {
         return "Please provide a command.";
     }
 
     switch(command) {
-        case "add": await add(); break;
-        case "list": list(); break;
-        case "read": read(); break;
-        case "remove": await  remove(); break;
-        case "update": await update(); break;
-        default: "Unknown command."; break;
+        case "add": 
+            return await add(); break;
+        case "list": 
+            return list(); break;
+        case "read": 
+            return read(); break;
+        case "remove": 
+            return await  remove(); break;
+        case "update":
+            return  await update(); break;
+        default: "Unknown command.";
     }
 }
