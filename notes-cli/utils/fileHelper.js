@@ -5,13 +5,7 @@ import { read } from "../commands/read.js";
 import { remove } from "../commands/remove.js";
 import {update} from "../commands/update.js";
 
-export const commandChecker = (command) => {
-    const firstArg = process.argv[2];
-
-}
-
 export const commandOrder = process.argv[2];
-
 export const notesData = await loadNotes();
 
 export const commandInput = (command) => {
