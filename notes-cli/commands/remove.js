@@ -1,6 +1,7 @@
 import {commandChecker, commandOrder, notesData} from "../utils/fileHelper.js";
+import {saveNotes} from "../services/notesService.js";
 
-export const remove = () => {
+export const remove = async() => {
     commandChecker("remove");
 
     const target = process.argv[3];
@@ -14,6 +15,7 @@ export const remove = () => {
             return "Note not found";
         }
 
+        await saveNotes(filteredNotes)
         return "Successfully removed";
     }
 }
