@@ -15,5 +15,5 @@ const readCommand = read();
 console.log(readCommand);
 
 // remove command
-const removeCommand = remove();
+const removeCommand = await remove();
 console.log(removeCommand);
