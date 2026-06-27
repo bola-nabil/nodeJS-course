@@ -8,6 +8,10 @@ export const read = () => {
     const foundSearch = notesData.find((data) => data.title === target);
 
     if(commandOrder === "read") {
-        return foundSearch;
+        if(foundSearch) {
+            return `ID: ${foundSearch.id}\nTitle: ${foundSearch.title}\nCreated: ${foundSearch.createdAt}`;
+        } else {
+            return "Note not found.";
+        }
     }
 }
