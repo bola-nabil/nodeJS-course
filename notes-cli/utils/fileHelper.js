@@ -3,7 +3,7 @@ import { add } from "../commands/add.js";
 import { list } from "../commands/list.js";
 import { read } from "../commands/read.js";
 import { remove } from "../commands/remove.js";
-import {update} from "../commands/update.js";
+import { update } from "../commands/update.js";
 
 export const commandOrder = process.argv[2];
 export const notesData = await loadNotes();
