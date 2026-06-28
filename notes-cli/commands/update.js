@@ -13,7 +13,7 @@ export const update = async() => {
         return "A note with this title already exists.";
     }
 
-    notesData.map(note => {
+    const updatedNotes = notesData.map(note => {
         if(note.title === oldTitle) {
            return {
             ...note,
@@ -22,5 +22,6 @@ export const update = async() => {
         }
     });
 
-    await saveNotes(update);
+    await saveNotes(updatedNotes);
+    return "Note updated successfully.";
 }
