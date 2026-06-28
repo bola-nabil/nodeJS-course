@@ -2,8 +2,13 @@ import { loadNotes, saveNotes } from "../services/notesService.js";
 
 export const add = async() => {
     const secondArg = process.argv[3];
-    const notesData = await loadNotes();
 
+    if (!secondArg) {
+        return "Please provide a note title.";
+    }
+
+    const notesData = await loadNotes();
+    
    const newId =
   notesData.length === 0
     ? 1
