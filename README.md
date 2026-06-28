@@ -8,4 +8,4 @@ Node.JS course
 - Stream Module
 
 ## Projects
-- CLI Notes App
+- [CLI Notes App](https://github.com/bola-nabil/nodeJS-course/tree/master/notes-cli)
