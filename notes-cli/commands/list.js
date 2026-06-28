@@ -5,5 +5,5 @@ export const list = () => {
         return  `ID: ${data.id}\nTitle: ${data.title}\nCreated: ${data.createdAt}`
       });
 
-      return data.toString();
+      return data.join("\n\n");
 }
