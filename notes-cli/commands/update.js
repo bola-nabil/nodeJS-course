@@ -33,6 +33,7 @@ export const update = async() => {
             title: newTitle
            }
         }
+        return note;
     });
 
     await saveNotes(updatedNotes);
