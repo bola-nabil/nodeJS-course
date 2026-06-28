@@ -1,5 +1,4 @@
-import { notesData } from "../utils/fileHelper.js";
-import { saveNotes } from "../services/notesService.js";
+import { loadNotes, saveNotes } from "../services/notesService.js";
 
 export const update = async() => {
     const oldTitle = process.argv[3];
@@ -9,7 +8,9 @@ export const update = async() => {
         return "Please provide both old and new titles.";
     }
 
-     const duplicateTitle = notesData.some(
+    const notesData = await loadNotes();
+
+    const duplicateTitle = notesData.some(
         note => note.title === newTitle
     );
 

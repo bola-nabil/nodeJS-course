@@ -1,5 +1,4 @@
-import {notesData} from "../utils/fileHelper.js";
-import {saveNotes} from "../services/notesService.js";
+import { loadNotes, saveNotes } from "../services/notesService.js";
 
 export const remove = async() => {
 
@@ -8,6 +7,8 @@ export const remove = async() => {
     if (!target) {
         return "Please provide a note title.";
     }
+
+    const notesData = await loadNotes();
 
     const filteredNotes = notesData.filter(
         note => note.title !== target

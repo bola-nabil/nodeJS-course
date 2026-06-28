@@ -1,4 +1,4 @@
-import {notesData} from "../utils/fileHelper.js";
+import { loadNotes } from "../services/notesService";
 
 export const read = () => {
     const target = process.argv[3];
@@ -6,6 +6,8 @@ export const read = () => {
     if (!target) {
         return "Please provide a note title.";
     }
+    
+    const notesData = await loadNotes();
 
     const foundSearch = notesData.find((data) => data.title === target);
 
