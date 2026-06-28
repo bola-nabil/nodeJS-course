@@ -17,7 +17,7 @@ export const add = async() => {
     if (duplicate) {
         return "Note already exists.";
     }
-    
+
    const newId =
   notesData.length === 0
     ? 1
@@ -27,12 +27,6 @@ export const add = async() => {
      id: newId,
      title: secondArg,
      createdAt: new Date().toISOString(),
-   }
-
-   const titleData = notesData.map((data) => data.title);
-
-   if(titleData.includes(secondArg)) {
-     return "Note already exists.";
    }
 
    notesData.push(objectData);
