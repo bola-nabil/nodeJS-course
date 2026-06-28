@@ -8,10 +8,19 @@ export const update = async() => {
     if (!oldTitle || !newTitle) {
         return "Please provide both old and new titles.";
     }
-    
+
      const duplicateTitle = notesData.some(
         note => note.title === newTitle
     );
+
+    const noteExists = notesData.some(
+        note => note.title === oldTitle
+    );
+
+    if (!noteExists) {
+        return "Note not found.";
+    }
+
 
     if (duplicateTitle) {
         return "A note with this title already exists.";
