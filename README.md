@@ -6,3 +6,6 @@ Node.JS course
 - File System
 - Events Module
 - Stream Module
+
+## Projects
+- CLI Notes App
