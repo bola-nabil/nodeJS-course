@@ -2,8 +2,8 @@ import { notesData } from "../utils/fileHelper.js";
 import { saveNotes } from "../services/notesService.js";
 
 export const update = async() => {
-    const oldTitle = process.argv[2];
-    const newTitle = process.argv[3];
+    const oldTitle = process.argv[3];
+    const newTitle = process.argv[4];
 
      const duplicateTitle = notesData.some(
         note => note.title === newTitle
