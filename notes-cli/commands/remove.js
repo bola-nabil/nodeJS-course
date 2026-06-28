@@ -5,6 +5,10 @@ export const remove = async() => {
 
     const target = process.argv[3];
 
+    if (!target) {
+        return "Please provide a note title.";
+    }
+
     const filteredNotes = notesData.filter(
         note => note.title !== target
     );
