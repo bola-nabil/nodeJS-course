@@ -5,6 +5,10 @@ export const update = async() => {
     const oldTitle = process.argv[3];
     const newTitle = process.argv[4];
 
+    if (!oldTitle || !newTitle) {
+        return "Please provide both old and new titles.";
+    }
+    
      const duplicateTitle = notesData.some(
         note => note.title === newTitle
     );
