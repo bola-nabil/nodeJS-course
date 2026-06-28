@@ -6,7 +6,6 @@ import { remove } from "../commands/remove.js";
 import { update } from "../commands/update.js";
 
 export const commandOrder = process.argv[2];
-export const notesData = await loadNotes();
 
 export const commandInput = async (command) => {
 
@@ -25,6 +24,7 @@ export const commandInput = async (command) => {
             return await  remove(); break;
         case "update":
             return  await update(); break;
-        default: "Unknown command.";
+        default:
+            return "Unknown command.";
     }
 }
