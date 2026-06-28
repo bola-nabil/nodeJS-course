@@ -8,6 +8,15 @@ export const add = async() => {
     }
 
     const notesData = await loadNotes();
+
+
+    const duplicate = notesData.some(
+        note => note.title === secondArg
+    );
+
+    if (duplicate) {
+        return "Note already exists.";
+    }
     
    const newId =
   notesData.length === 0
