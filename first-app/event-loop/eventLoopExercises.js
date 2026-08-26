@@ -33,3 +33,17 @@ Promise.resolve().then(() => {
 
 console.log("C");
 // output -- A C B
+
+// Exercise 5
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("C");
+});
+
+console.log("D");
+// Ouput -- A D C B
