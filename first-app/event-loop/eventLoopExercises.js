@@ -23,3 +23,13 @@ setTimeout(() => {
 
 console.log("End");
 // Output -- Start End Timer
+
+// forth
+console.log("A");
+
+Promise.resolve().then(() => {
+    console.log("B");
+});
+
+console.log("C");
+// output -- A C B
