@@ -47,3 +47,13 @@ Promise.resolve().then(() => {
 
 console.log("D");
 // Ouput -- A D C B
+
+// Exercise 6
+console.log("A");
+
+process.nextTick(() => {
+    console.log("B");
+});
+
+console.log("C");
+// Ouput -- A C B
