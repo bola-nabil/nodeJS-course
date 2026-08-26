@@ -13,3 +13,13 @@ setTimeout(() => {
 
 console.log("C");
 // ouput -- A C B
+
+// third
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timer");
+}, 1000);
+
+console.log("End");
+// Output -- Start End Timer
