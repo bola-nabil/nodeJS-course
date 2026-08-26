@@ -47,7 +47,7 @@ process.nextTick(() => {
 });
 
 console.log("5");
-
+// ouptput -- 1 5 4 3 2
 
 
 /*
