@@ -61,25 +61,25 @@ console.log("C");
 // Exercise 12
 import fs from "fs";
 
-console.log("1");
+console.log("1"); // step 1
 
-setTimeout(() => {
+setTimeout(() => { // step 7
     console.log("2");
 }, 0);
 
-setImmediate(() => {
+setImmediate(() => { // step 6
     console.log("3");
 });
 
-Promise.resolve().then(() => {
+Promise.resolve().then(() => { // step 4
     console.log("4");
 });
 
-process.nextTick(() => {
+process.nextTick(() => { // step 3
     console.log("5");
 });
 
-fs.readFile("test.txt", "utf8", () => {
+fs.readFile("test.txt", "utf8", () => { // step 5
     console.log("6");
 
     process.nextTick(() => {
@@ -99,4 +99,5 @@ fs.readFile("test.txt", "utf8", () => {
     });
 });
 
-console.log("11");
+console.log("11"); // step 2
+// Ouput -- 1 11 5 4 6 7 8 10 9 32
