@@ -57,3 +57,46 @@ process.nextTick(() => {
 
 console.log("C");
 // Ouput -- A C B
+
+// Exercise 12
+import fs from "fs";
+
+console.log("1");
+
+setTimeout(() => {
+    console.log("2");
+}, 0);
+
+setImmediate(() => {
+    console.log("3");
+});
+
+Promise.resolve().then(() => {
+    console.log("4");
+});
+
+process.nextTick(() => {
+    console.log("5");
+});
+
+fs.readFile("test.txt", "utf8", () => {
+    console.log("6");
+
+    process.nextTick(() => {
+        console.log("7");
+    });
+
+    Promise.resolve().then(() => {
+        console.log("8");
+    });
+
+    setTimeout(() => {
+        console.log("9");
+    }, 0);
+
+    setImmediate(() => {
+        console.log("10");
+    });
+});
+
+console.log("11");
