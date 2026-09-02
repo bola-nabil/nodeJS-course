@@ -2,6 +2,8 @@ import http from "http";
 
 const server = http.createServer((req, res) => {
     res.setHeader("Content-Type", "text/html");
+
+    console.log("Request header", req.headers);
     
     if(req.method === "GET" && req.url === "/") {
         res.statusCode = 200;
